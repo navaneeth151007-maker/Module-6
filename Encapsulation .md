@@ -58,7 +58,7 @@ print("Updated Breadth:", rect.get_breadth())
 print("Area of Rectangle:", rect.calculate_area())
 ```
 ## Output
-![Uploading image.png…]()
+<img width="255" height="116" alt="image" src="https://github.com/user-attachments/assets/ab36d897-d8b1-460f-96f8-16420aacf562" />
 
 ## Result
 Thus a python program to write a python program to overload a comparison operator has been written and executed successfully.
