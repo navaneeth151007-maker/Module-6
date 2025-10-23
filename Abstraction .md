@@ -30,27 +30,38 @@ To create an **abstract class** named `Shape` with an **abstract method** `calcu
 
 ## 💻 Program
 ```c
-class Cat:
-    def mood(self):
-        print("Grumpy")
-    def sound(self):
-        print("Meow")
- 
-class Dog:
-    def mood(self):
-        print("Happy")
-    def sound(self):
-        print("Woof")
- 
-hello_kitty = Cat()
-hello_puppy = Dog()
- 
-for pet in (hello_kitty, hello_puppy):
-    pet.mood()
-    pet.sound()
+from abc import ABC, abstractmethod
+import math
+
+class Shape(ABC):
+    @abstractmethod
+    def calculate_area(self):
+        pass
+
+class Rectangle(Shape):
+    def __init__(self, length, width):
+        self.length = length
+        self.width = width
+    
+    def calculate_area(self):
+        return self.length * self.width
+
+class Circle(Shape):
+    def __init__(self, radius):
+        self.radius = radius
+    
+    def calculate_area(self):
+        return math.pi * self.radius * self.radius
+
+rect = Rectangle(10, 5)
+circle = Circle(7)
+
+print("Area of Rectangle:", rect.calculate_area())
+print("Area of Circle:", round(circle.calculate_area(), 2))
+
 ```
 ## Output
-<img width="190" height="98" alt="image" src="https://github.com/user-attachments/assets/85b27fe0-7b61-4ba1-aa8d-f62b18faf223" />
+<img width="242" height="37" alt="image" src="https://github.com/user-attachments/assets/a1933773-2f86-4ea4-981e-00fd53a9026a" />
 
 ## Result
 Thus a python program to create two classes with functions mood() and sound() has been written and executed successfully.
