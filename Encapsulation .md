@@ -24,20 +24,41 @@ To implement **Encapsulation** in Python by defining a class `Rectangle` with **
 
 ## 💻 Program
 ```c
-class A:
-    def __init__(self,a):
-        self.a=a
-    def __gt__(self,other):
-        return self.a>other.a
-ob1=A(2)
-ob2=A(3)
-if ob2>ob1:
-    print("ob2 is greater than ob1")
-else:
-    print("ob1 is greater than ob2")
+class Rectangle:
+    def __init__(self, length, breadth):
+        self.__length = length     # Private variable
+        self.__breadth = breadth   # Private variable
+
+    def set_length(self, length):
+        self.__length = length
+
+    def set_breadth(self, breadth):
+        self.__breadth = breadth
+
+    def get_length(self):
+        return self.__length
+
+    def get_breadth(self):
+        return self.__breadth
+    def calculate_area(self):
+        return self.__length * self.__breadth
+
+
+rect = Rectangle(10, 5)
+
+print("Length:", rect.get_length())
+print("Breadth:", rect.get_breadth())
+
+rect.set_length(12)
+rect.set_breadth(6)
+
+print("Updated Length:", rect.get_length())
+print("Updated Breadth:", rect.get_breadth())
+
+print("Area of Rectangle:", rect.calculate_area())
 ```
 ## Output
-<img width="242" height="28" alt="image" src="https://github.com/user-attachments/assets/54c99f4e-1e63-4b47-86bc-ece9bd241a05" />
+![Uploading image.png…]()
 
 ## Result
 Thus a python program to write a python program to overload a comparison operator has been written and executed successfully.
