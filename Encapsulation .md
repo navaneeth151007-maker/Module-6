@@ -23,7 +23,21 @@ To implement **Encapsulation** in Python by defining a class `Rectangle` with **
 ---
 
 ## 💻 Program
-
+```c
+class A:
+    def __init__(self,a):
+        self.a=a
+    def __gt__(self,other):
+        return self.a>other.a
+ob1=A(2)
+ob2=A(3)
+if ob2>ob1:
+    print("ob2 is greater than ob1")
+else:
+    print("ob1 is greater than ob2")
+```
 ## Output
+<img width="242" height="28" alt="image" src="https://github.com/user-attachments/assets/54c99f4e-1e63-4b47-86bc-ece9bd241a05" />
 
 ## Result
+Thus a python program to write a python program to overload a comparison operator has been written and executed successfully.
